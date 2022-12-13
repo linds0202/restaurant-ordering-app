@@ -149,10 +149,14 @@ h3 {
     font-weight: bold;
     color: #ffffff;
     background: #16DB99;
-    border: none;
+    border: 1px solid #16DB99;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 3px;
     margin-top: 40px;
+}
+
+.btn:hover {
+    border: 1px solid black;
 }
 
 
