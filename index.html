@@ -1,5 +1,5 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Smythe&display=swap" rel="stylesheet">
@@ -31,28 +31,12 @@
                 </div>
                 <div class="modal-inner" id="modal-inner">
                     <h2>Enter card details</h2>
-                    <input 
-                        type="text" 
-                        id='name'
-                        name='name'
-                        placeholder="Enter your name"
-                        required
-                    >
-                    <input 
-                        type="number" 
-                        id='card-number'
-                        name='card-number'
-                        placeholder="Enter card number"
-                        required
-                    >
-                    <input 
-                        type="number" 
-                        id='card-cvv-number'
-                        name='card-cvv-number'
-                        placeholder="Enter CVV"
-                        required
-                    >
-                    <button type='submit' id='pay-btn' class='pay-btn btn'>Pay</button>	
+                    <form id='card-form'>
+                        <input type="text" id='name' name='name' placeholder="Enter your name" required/>
+                        <input type="number" id='card-number' name='card-number' placeholder="Enter card number" required/>
+                        <input type="number" id='card-cvv-number' name='card-cvv-number' placeholder="Enter CVV" required/>
+                        <button type="submit" id='pay-btn' class='pay-btn btn'>Pay</button>	
+                    </form>
                 </div>
             </div>
             <div class='complete-msg hidden'>
