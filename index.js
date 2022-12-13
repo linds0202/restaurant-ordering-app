@@ -2,22 +2,27 @@ import { menuArray } from '/data.js'
 
 const modal = document.getElementById('modal')
 const customerName = document.getElementById('name')
+const payForm = document.getElementById('card-form')
 
 let cartItems = []
 
+
 document.addEventListener('click', function(e){
-        
     if (e.target.dataset.id) {        
         handleAddClick(e.target.dataset.id)
     } else if (e.target.dataset.remove) {
         handleRemoveClick(e.target.dataset.remove)
     } else if (e.target.id === 'submit-btn') {
         handleSubmitOrderClick()
-    } else if (e.target.id === 'pay-btn') {
-        handlePayClick()
     } else if (e.target.id === 'modal-close-btn') {
         handleCloseModal()
     }
+})
+
+//handle form submit
+payForm.addEventListener('submit', function(e) {
+    e.preventDefault()
+    handlePayClick()
 })
 
 function render() {
